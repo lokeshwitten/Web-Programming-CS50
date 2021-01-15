@@ -1,0 +1,16 @@
+{%extends 'flights/layout.html'%}
+{%load static %}
+
+{%block body%}
+<link href="{%static 'flights/styles.css' %}" rel="stylesheet">
+<h1>List of All Flights currently available for booking</h1>
+<ol>
+    {%for flight in flights%}
+        <li><a href="{% url 'flight:display' flight.id %}">
+            From {{flight.origin}} to {{flight.destination}}
+        </a> </li>
+    {%endfor%}
+</ol>
+        
+            
+ {%endblock%}

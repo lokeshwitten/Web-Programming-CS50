@@ -1,0 +1,14 @@
+{%extends 'flights/layout.html'%}
+{%load static%}
+
+{%block body%}
+<h1>Flight {{flight.id}}</h1>
+<link href="{%static 'flights/styles.css' %}" rel="stylesheet">
+<ul>
+    <li>Flight id : {{flight.id}}</li>
+    <li>Flight Origin : {{flight.origin}}</li>
+    <li>Flight Destination : {{flight.destination}}</li>
+    
+</ul>
+<a href="{% url 'flight:index' %}">Back to the Index page</a>
+{%endblock%}
